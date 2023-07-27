@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a class="btn btn-primary" href="{{ path('brand_create') }}">Add Brand</a>
+    <div class="bs-example" data-example-id="striped-table">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for brand in brands %}
+                <tr>
+                    <th scope="row">{{ brand.id }}</th>
+                    <td>{{ brand.name }}</td>
+
+                    {#                    <td> <a href="{{ asset('upload/image/' ~ product.image) }}">View image</a><td>#}
+                    <td>
+                        <a href="{{ path('brand_details', {'id': brand.id}) }} " class='btn btn-success'>View</a>
+                        <a href="{{ path('brand_edit', {'id': brand.id}) }}" class='btn btn-default'>Edit</a>
+                        <a href="{{ path('brand_delete', {'id': brand.id}) }}" class='btn btn-danger'>Delete</a>
+                        {#                        <a href="{{path('product_details',{'id':product.id})}} " class='btn btn-success'>View</a>#
+                        {#                        <a href="#" class='btn btn-default'>Edit</a>#}
+                        {#                        <a href="{{ path('product_delete', {'id': product.id}) }} "class='btn btn-danger'>Delete</a>#}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+

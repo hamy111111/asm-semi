@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('app_brand') }}" class="btn btn-primary">Back to brand List</a>
+    <hr/>
+    <h2 class="page-header">{{brand.name }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Name: {{ brand.name }}</li>
+
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+        <div class="form-group">
+        <label for="brand">name:</label>
+        {{ form_widget(form.name,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'name'
+            }
+        }) }}
+    </div>
+
+    <input type="submit" name="create_brand" value="Create" class="btn btn-Secondary"/>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+    <div class="form-group">
+        <label for="brand">name:</label>
+        {{ form_widget(form.name,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'name'
+            }
+        }) }}
+{#    </div>#}
+{#    <div class="form-group">#}
+{#        <label for="category">Price:</label>#}
+{#        {{ form_widget(form.price,{#}
+{#            'attr':{#}
+{#                'class':'form-control',#}
+{#                'placeholder': 'Price'#}
+{#            }#}
+{#        }) }}#}
+{#    </div>#}
+{#    <div class="form-group">#}
+{#        <label for="description">Size</label>#}
+{#        {{ form_widget(form.size,{#}
+{#            'attr':{#}
+{#                'class':'form-control',#}
+{#                'placeholder': 'size'#}
+{#            }#}
+{#        }) }}#}
+{#    </div>#}
+
+{#    <div class="form-group">#}
+{#        <label for="due_date">brand</label>#}
+{#        {{ form_widget(form.brand,{#}
+{#            'attr':{#}
+{#                'class':'form-control'#}
+{#            }#}
+{#        }) }}#}
+{#    </div>#}
+{#    <div class="form-group">#}
+{#        <label for="due_date">Image</label>#}
+{#        {{ form_widget(form.image,{#}
+
+{#        }) }}#}
+    </div>
+    <input type="submit" name="create_product" value="Update" class="btn btn-dark"/>
+    {{ form_end(form) }}
+{% endblock %}

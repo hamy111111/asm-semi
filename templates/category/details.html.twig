@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('app_category') }}" class="btn btn-default">Back to category List</a>
+    <hr/>
+    <h2 class="page-header">{{category.name }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Name: {{ category.name }}</li>
+
+    </ul>
+
+{% endblock %}
